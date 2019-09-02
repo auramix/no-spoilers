@@ -4,6 +4,8 @@
   "description": "A starting point for React projects using webpack",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/index.js",
+    "build": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,12 +21,14 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
+    "nodemon": "^1.19.1",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
