@@ -17,31 +17,22 @@ Once the project moves into development, the press release can be used as a touc
  -->
 
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
   No Spoilers - the spoiler-free way to watch great football.
 
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
   For soccer fans that want to know the best games of the week to watch without knowing the outcome.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
   No Spoilers allows football/soccer fans to find the best games of the week to watch without being made aware of the outcome. Did you record yesterday's champions league matches and now need to know which are the best to watch? Just visit our website and select the champions league as your competetion of choice to get results based upon the time period you choose. You can search past years' games too!
 ## Problem ##
-  > Describe the problem your product solves.
  Soccer fans want to know which games of the week they missed were the most exciting so they can reliably choose to watch an interesting match.
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
  No spoilers reliably rates games based on their general excitement so viewers can decide what's worth their time without being told the outcome.
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
 At No Spoilers, we take football viewing seriously and want to provide our users with the best rundown of historical games to ensure they're only watching "the best".
 ## How to Get Started ##
-  > Describe how easy it is to get started.
 Select your competition of choice and date range for a selection of the most interesting games of the period.
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
 "At the end of the workday, I no longer have to guess which game I should watch; No Spoilers let's me know the best of the bunch, every time!"
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
   Visit nospoilers.com to find your league's best games!
