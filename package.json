@@ -1,7 +1,7 @@
 {
-  "name": "react.webpack",
+  "name": "no.spoilers",
   "version": "1.0.0",
-  "description": "A starting point for React projects using webpack",
+  "description": "A web app that rates past soccer matches",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server/index.js",
@@ -10,7 +10,8 @@
   },
   "keywords": [
     "React",
-    "template"
+    "mvp",
+    "rpt14"
   ],
   "author": "Scott Josephson",
   "license": "ISC",
