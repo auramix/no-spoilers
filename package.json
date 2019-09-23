@@ -4,7 +4,8 @@
   "description": "A web app that rates past soccer matches",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"webpack -d --watch\" \"nodemon server/index.js\"",
+    "start": "nodemon server/index.js",
+    "build": "webpack -d --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

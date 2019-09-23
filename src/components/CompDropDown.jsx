@@ -3,7 +3,7 @@ import React from 'react';
 function CompDropDown (props) {
   return (
     <div>
-      <label for="competition">Select a competition:</label>
+      <label htmlFor="competition" name="competition" onChange={props.onChange}>Select a competition:</label>
       <select id="comp-list">
         <option value="">--Please choose a competition--</option>
         <option value="CL">Champions League</option>
