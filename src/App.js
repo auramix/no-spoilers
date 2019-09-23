@@ -50,7 +50,7 @@ class App extends Component{
         <h1> Welcome to No Spoilers </h1>
         <div>
           <form onSubmit={this.handleSubmit}>
-            <CompDropDown onChange={this.handleCompetitionChange}/>
+            <CompDropDown onChange={this.handleChange}/>
             <div>
               <DatePicker name="dateFrom" id="dateFrom" text="Start Date:" value={this.state.dateFrom} onChange={this.handleChange}/>
               <DatePicker name="dateTo" id="dateTo" text="End Date:" value={this.state.dateTo} onChange={this.handleChange}/>
