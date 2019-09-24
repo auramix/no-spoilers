@@ -24,10 +24,6 @@ class App extends Component{
     this.setState({[name]: e.target.value})
   }
 
-  handleCompetitionChange(e) {
-    this.setState({'competition': e.target.value})
-  }
-
   handleSubmit(e) {
     e.preventDefault();
 
