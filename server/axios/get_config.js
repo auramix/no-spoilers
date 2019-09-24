@@ -1,2 +1,2 @@
 import key from "./api_key.js";
-export default {baseURL: 'http://api.football-data.org/v2/competitions/', method: 'get', headers: {'X-RapidAPI-Key': key}, timeout: 5000, responseType: 'json'};
+export default {baseURL: 'https://api-football-v1.p.rapidapi.com/v2/', method: 'get', headers: {'X-RapidAPI-Key': key}, timeout: 10000, responseType: 'json'};

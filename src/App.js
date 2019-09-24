@@ -10,12 +10,10 @@ class App extends Component{
     super(props);
     this.state = {
       competition: '',
-      dateFrom: '',
-      dateTo: '',
-      matches: []
+      matchDate: '',
+      fixtures: []
     }
     this.handleChange = this.handleChange.bind(this);
-    this.handleCompetitionChange = this.handleCompetitionChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -26,14 +24,30 @@ class App extends Component{
 
   handleSubmit(e) {
     e.preventDefault();
+    let url = `/fixtures/league/${this.state.competition}/${this.state.matchDate}`;
 
-    config.url = `/${this.state.competition}/matches?dateFrom=${this.state.dateFrom}&dateTo=${this.state.dateTo}`;
-    console.log('CONFIG: ', config);
-    axios.request(config)
+    axios.get(url, config)
       .then(response => {
-        const matches = response.data.matches;
-        this.setState({matches: matches});
-        console.log('Matches - ', matches);
+        var fixtures = response.data.api.fixtures;
+        this.setState({fixtures: fixtures});
+        // console.log('Fixtures - ', fixtures);
+
+        var fixtureEvents = fixtures.map(fixture => {
+          let fixtureId = fixture.fixture_id;
+          let url = `/events/${fixtureId}`;
+          return axios.get(url, config);
+        });
+
+        return Promise.all(fixtureEvents);
+      })
+      .then(fixtureEvents => {
+        console.log('Event values for fixtures', fixtureEvents);
+        let fixtures = this.state.fixtures.slice();
+
+        fixtures.forEach((fixture, i) => {
+          fixture.events = fixtureEvents[i].data.api.events;
+        })
+        this.setState({fixtures: fixtures})
       })
       .catch(err => {
         console.log('Error: axios get request - ', err);
@@ -48,8 +62,7 @@ class App extends Component{
           <form onSubmit={this.handleSubmit}>
             <CompDropDown onChange={this.handleChange}/>
             <div>
-              <DatePicker name="dateFrom" id="dateFrom" text="Start Date:" value={this.state.dateFrom} onChange={this.handleChange}/>
-              <DatePicker name="dateTo" id="dateTo" text="End Date:" value={this.state.dateTo} onChange={this.handleChange}/>
+              <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange}/>
             </div>
             <div>
               <input type="submit" value="Find Matches"></input>

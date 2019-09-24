@@ -1,0 +1,982 @@
+id / League / Country
+
+1 / World Cup / World
+524 / Premier League / England
+525 / League 1 / France
+530 / Champions League / World
+891 / Serie A / Italy
+775 / La Liga / Spain
+754 / Bundesliga 1 / Germany
+
+
+
+
+
+
+
+
+
+
+
+
+
+*** 2 / Premier League / England ***
+3 / Championship / England
+*** 4 / Ligue 1 / France ***
+5 / Ligue 2 / France
+6 / Serie A / Brazil
+7 / Serie B / Brazil
+*** 8 / Bundesliga 1 / Germany ***
+9 / Bundesliga 2 / Germany
+10 / Eredivisie / Netherlands
+11 / Primeira Liga / Portugal
+12 / Liga de Honra / Portugal
+13 / J. League Div.1 / Japan
+14 / J. League Div.2 / Japan
+15 / Eliteserien / Norway
+16 / Ekstraklasa / Poland
+17 / Premier / Wales
+18 / Allsvenskan / Sweden
+19 / Vyscha Liga / Belarus
+20 / Superligaen / Denmark
+21 / Eerste Divisie / Netherlands
+22 / Ligue 1 / France
+23 / Ligue 1 / France
+24 / Ligue 2 / France
+25 / Ligue 2 / France
+26 / Primera Division / Argentina
+27 / Primera B Nacional / Argentina
+*** 28 / Serie A / Italy ***
+29 / Serie B / Italy
+*** 30 / Primera Division / Spain ***
+*** 31 / Champions League / World ***
+32 / Europa League / World
+33 / Segunda Division / Spain
+34 / Jupiler Pro League / Belgium
+35 / Bundesliga 1 / Germany
+36 / Bundesliga 2 / Germany
+37 / Premier League / England
+38 / Championship / England
+39 / Jupiler Pro League / Belgium
+40 / Vyscha Liga / Belarus
+41 / Serie A / Brazil
+42 / Serie B / Brazil
+43 / J. League Div.1 / Japan
+44 / J. League Div.2 / Japan
+45 / Eliteserien / Norway
+46 / Eredivisie / Netherlands
+47 / Eerste Divisie / Netherlands
+48 / Primeira Liga / Portugal
+49 / Liga de Honra / Portugal
+50 / Allsvenskan / Sweden
+51 / Euro Championship / World
+52 / Champions League / World
+53 / Europa League / World
+54 / Bundesliga 1 / Germany
+55 / Bundesliga 2 / Germany
+56 / Premier League / England
+57 / Championship / England
+58 / Primera Division / Argentina
+59 / Primera B Nacional / Argentina
+60 / Jupiler Pro League / Belgium
+61 / Vyscha Liga / Belarus
+62 / Serie A / Brazil
+63 / Serie B / Brazil
+64 / Primera Division / Spain
+65 / Segunda Division / Spain
+66 / Serie A / Italy
+67 / Serie B / Italy
+68 / J. League Div.1 / Japan
+69 / J. League Div.2 / Japan
+70 / Eliteserien / Norway
+71 / Eredivisie / Netherlands
+72 / Eerste Divisie / Netherlands
+73 / Primeira Liga / Portugal
+74 / Liga de Honra / Portugal
+75 / Allsvenskan / Sweden
+76 / Primera Division / Costa-Rica
+77 / Primera Division / Costa-Rica
+78 / Primera Division / Costa-Rica
+79 / Premier / Iceland
+80 / Premier / Iceland
+81 / Premier / Iceland
+82 / Super League / China
+83 / Super League / China
+84 / Super League / China
+85 / A PFG / Bulgaria
+86 / Primera Division / Argentina
+87 / Primera Division / Spain
+88 / Segunda Division / Spain
+89 / Coppa Italia / Italy
+90 / Coppa Italia / Italy
+91 / Premiership / Scotland
+92 / Premiership / Scotland
+93 / Premiership / Scotland
+94 / Serie A / Italy
+95 / Serie B / Italy
+96 / Primera B Nacional / Argentina
+97 / Ligue 1 / Algeria
+98 / Ligue 1 / Algeria
+99 / Ligue 1 / Algeria
+100 / Ligue 2 / Algeria
+101 / Ligue 2 / Algeria
+102 / Ligue 2 / Algeria
+103 / A-League / Australia
+104 / A-League / Australia
+105 / A-League / Australia
+106 / Super League / Greece
+107 / Super League / Greece
+108 / Super League / Greece
+109 / Botola Pro / Morocco
+110 / Botola Pro / Morocco
+111 / Ligue Professionnelle 1 / Tunisia
+112 /  Super Lig / Turkey
+113 /  Super Lig / Turkey
+114 /  Super Lig / Turkey
+115 / Botola Pro / Morocco
+116 / Ligue Professionnelle 1 / Tunisia
+117 / Super League / Switzerland
+118 / Super League / Switzerland
+119 / Super League / Switzerland
+120 / Prva HNL / Croatia
+121 / Prva HNL / Croatia
+122 / Prva HNL / Croatia
+123 / Tipp3 Bundesliga / Austria
+124 / Tipp3 Bundesliga / Austria
+125 / Tipp3 Bundesliga / Austria
+126 / Premier League / Egypt
+127 / Premier League / Egypt
+128 / Premier League / Egypt
+129 / Liga Nacional de Fútbol / Honduras
+130 / Liga Nacional de Fútbol / Honduras
+131 / Liga Nacional de Fútbol / Honduras
+132 / Champions League / World
+133 / Premier League / Russia
+134 / Premier League / Russia
+135 / Premier League / Russia
+136 / UEFA Nations League / World
+137 / Europa League / World
+138 / Primera A / Colombia
+139 / Primera A / Colombia
+140 / Primera A / Colombia
+141 / Serie A / Ecuador
+142 / Serie A / Ecuador
+143 / Serie A / Ecuador
+144 / Veikkausliiga / Finland
+145 / Veikkausliiga / Finland
+146 / Veikkausliiga / Finland
+147 / Primera Division - Apertura / Paraguay
+148 / Primera Division - Apertura / Paraguay
+149 / Primera Division - Apertura / Paraguay
+150 / Copa Do Brasil / Brazil
+151 / Copa Do Brasil / Brazil
+152 / Copa Do Brasil / Brazil
+153 / KNVB Beker / Netherlands
+154 / KNVB Beker / Netherlands
+155 / KNVB Beker / Netherlands
+156 / National / France
+157 / National / France
+158 / National / France
+159 / Liga 3 / Germany
+160 / Liga 3 / Germany
+161 / Liga 3 / Germany
+162 / League One / England
+163 / League One / England
+164 / League One / England
+165 / League Two / England
+166 / League Two / England
+167 / League Two / England
+168 / Championship / Scotland
+169 / Championship / Scotland
+170 / Championship / Scotland
+171 / 2e Klasse / Belgium
+172 / 2e Klasse / Belgium
+173 / 2e Klasse / Belgium
+174 / Erste Liga / Austria
+175 / Erste Liga / Austria
+176 / Erste Liga / Austria
+177 / B PFG / Bulgaria
+178 / B PFG / Bulgaria
+179 / B PFG / Bulgaria
+180 / League One / China
+181 / League One / China
+182 / League One / China
+183 / National Premier Leagues / Australia
+184 / National Premier Leagues / Australia
+185 / National Premier Leagues / Australia
+186 / Primera B / Colombia
+187 / Primera B / Colombia
+188 / Primera B / Colombia
+189 / Druga HNL / Croatia
+190 / Druga HNL / Croatia
+191 / Druga HNL / Croatia
+192 / Africa Cup of Nations / World
+193 / Africa Cup of Nations / World
+194 / Africa Cup of Nations / World
+195 / Asian Cup / World
+196 / Asian Cup / World
+197 / Asian Cup / World
+198 / Coppa Italia / Italy
+199 / Major League Soccer / USA
+200 / Major League Soccer / USA
+201 / Major League Soccer / USA
+202 / DFB Pokal / Germany
+203 / DFB Pokal / Germany
+204 / DFB Pokal / Germany
+205 / Feminine Division 1 / France
+206 / Feminine Division 1 / France
+207 / Feminine Division 1 / France
+208 / Serie C / Italy
+209 / Serie C / Italy
+210 / Serie C / Italy
+211 / World Cup Women / World
+212 / World Cup Women / World
+213 / World Cup Women / World
+214 / Super League Women / Belgium
+215 / Super League Women / Belgium
+216 / Super League Women / Belgium
+217 / Brasileiro Women / Brazil
+218 / Brasileiro Women / Brazil
+219 / Brasileiro Women / Brazil
+220 / National League / England
+221 / National League / England
+222 / National League / England
+223 / FA WSL / England
+224 / FA WSL / England
+225 / FA WSL / England
+226 / Women Bundesliga / Germany
+227 / Women Bundesliga / Germany
+228 / Women Bundesliga / Germany
+229 / Serie A Women / Italy
+230 / Serie A Women / Italy
+231 / Serie A Women / Italy
+232 / Eredivisie Women / Netherlands
+233 / Eredivisie Women / Netherlands
+234 / Eredivisie Women / Netherlands
+235 / Primera Division Women / Spain
+236 / Primera Division Women / Spain
+237 / Primera Division Women / Spain
+238 / Copa Argentina / Argentina
+239 / Copa Argentina / Argentina
+240 / Copa Argentina / Argentina
+241 / W-League / Australia
+242 / W-League / Australia
+243 / W-League / Australia
+244 / Serie B / Ecuador
+245 / Serie B / Ecuador
+246 / Serie B / Ecuador
+247 / Football National League / Russia
+248 / Football National League / Russia
+249 / Football National League / Russia
+250 / Canadian Soccer League / Canada
+251 / Canadian Soccer League / Canada
+252 / National Division / Luxembourg
+253 / National Division / Luxembourg
+254 / National Division / Luxembourg
+255 / Liga De Ascenso / Costa-Rica
+256 / Viasat Divisionen / Denmark
+257 / Viasat Divisionen / Denmark
+258 / Viasat Divisionen / Denmark
+259 / Ykkonen / Finland
+260 / Ykkonen / Finland
+261 / Ykkonen / Finland
+262 / Football League / Greece
+263 / Football League / Greece
+264 / Football League / Greece
+265 / Division 1 / Iceland
+266 / Division 1 / Iceland
+267 / Division 1 / Iceland
+268 / Segunda Division / Paraguay
+269 / Segunda Division / Paraguay
+270 / Segunda Division / Paraguay
+271 / OBOS-ligaen / Norway
+272 / OBOS-ligaen / Norway
+273 / OBOS-ligaen / Norway
+274 / Superettan / Sweden
+275 / Superettan / Sweden
+276 / Superettan / Sweden
+277 / Challenge League / Switzerland
+278 / Challenge League / Switzerland
+279 / Challenge League / Switzerland
+280 / Division 1 / Wales
+281 / Primera Division - Apertura / Paraguay
+282 / Copa Do Brasil / Brazil
+283 / J. League Div.1 / Japan
+284 / J. League Div.2 / Japan
+285 / Primera A / Colombia
+286 / Serie B / Ecuador
+287 / Eliteserien / Norway
+288 / OBOS-ligaen / Norway
+289 / National Premier Leagues / Australia
+290 / Superettan / Sweden
+291 / Allsvenskan / Sweden
+292 / Serie A / Ecuador
+293 / Primera B / Colombia
+294 / Major League Soccer / USA
+295 / Ykkonen / Finland
+296 / Super League / China
+297 / Liga MX / Mexico
+298 / Liga MX / Mexico
+299 / Liga MX / Mexico
+300 / Ascenso MX / Mexico
+301 / Ascenso MX / Mexico
+302 / Ascenso MX / Mexico
+303 / Primera Division / Chile
+304 / Primera Division / Chile
+305 / Primera B / Chile
+306 / Primera B / Chile
+307 / Primera Division - Apertura / Uruguay
+308 / Primera Division - Apertura / Uruguay
+309 / Segunda Division / Uruguay
+310 / Segunda Division / Uruguay
+311 / Copa America / World
+312 / Copa America / World
+313 / Copa America / World
+314 / NB I / Hungary
+315 / NB I / Hungary
+316 / NB I / Hungary
+317 / NB II / Hungary
+318 / NB II / Hungary
+319 / NB II / Hungary
+320 / Primera Division - Apertura / Uruguay
+321 / Copa Argentina / Argentina
+322 / Vyscha Liga / Belarus
+323 / Canadian Championship / Canada
+324 / Canadian Championship / Canada
+325 / Canadian Championship / Canada
+326 / Super League / Indonesia
+327 / Super League / Indonesia
+328 / Premier League / Kenya
+329 / Premier League / Kenya
+330 / Premier League / Kenya
+331 / Premier League / Kenya
+332 / Super League / Kenya
+333 / Super League / Malaysia
+334 / Super League / Malaysia
+335 / Super League / Malaysia
+336 / Super League / Malaysia
+337 / Premier League / Malaysia
+338 / Premier League / Malaysia
+339 / Premier League / Malaysia
+340 / Premier League / Malaysia
+341 / Football Championship / New-Zealand
+342 / Football Championship / New-Zealand
+343 / Football Championship / New-Zealand
+344 / Primera Division / Peru
+345 / Primera Division / Peru
+346 / Primera Division / Peru
+347 / Primera Division / Peru
+348 / Segunda Division / Peru
+349 / Segunda Division / Peru
+350 / Segunda Division / Peru
+351 / Liga I / Romania
+352 / Liga I / Romania
+353 / Liga I / Romania
+354 / Liga II / Romania
+355 / Liga II / Romania
+356 / Liga II / Romania
+357 / Serie A / Brazil
+358 / Serie B / Brazil
+359 / Canadian Championship / Canada
+360 / League One / China
+361 / Veikkausliiga / Finland
+362 / Premier / Iceland
+363 / Super Liga / Serbia
+364 / Super Liga / Serbia
+365 / Super Liga / Serbia
+366 / Prva Liga / Serbia
+367 / Prva Liga / Serbia
+368 / Prva Liga / Serbia
+369 / Premier Soccer League / South-Africa
+370 / Premier Soccer League / South-Africa
+371 / Premier Soccer League / South-Africa
+372 / National First Division / South-Africa
+373 / National First Division / South-Africa
+374 / National First Division / South-Africa
+375 / Persian Gulf Cup / Iran
+376 / Persian Gulf Cup / Iran
+377 / Persian Gulf Cup / Iran
+378 / Azadegan League / Iran
+379 / Azadegan League / Iran
+380 / Azadegan League / Iran
+381 / K-League Classic / South-Korea
+382 / K-League Classic / South-Korea
+383 / K-League Classic / South-Korea
+384 / K-League Classic / South-Korea
+385 / K-League Challenge / South-Korea
+386 / K-League Challenge / South-Korea
+387 / K-League Challenge / South-Korea
+388 / K-League Challenge / South-Korea
+389 / Thai Premier League / Thailand
+390 / Thai Premier League / Thailand
+391 / Thai Premier League / Thailand
+392 / Thai Premier League / Thailand
+393 / Thai League 2 / Thailand
+394 / Thai League 2 / Thailand
+395 / Primera Division / Venezuela
+396 / Primera Division / Venezuela
+397 / Primera Division / Venezuela
+398 / Primera Division / Venezuela
+399 / Segunda Division / Venezuela
+400 / Segunda Division / Venezuela
+401 / Segunda Division / Venezuela
+402 / Segunda Division / Venezuela
+403 / Euro Championship / World
+404 / Arabian Gulf League / United-Arab-Emirates
+405 / Arabian Gulf League / United-Arab-Emirates
+406 / Arabian Gulf League / United-Arab-Emirates
+407 / League Cup / United-Arab-Emirates
+408 / League Cup / United-Arab-Emirates
+409 / League Cup / United-Arab-Emirates
+410 / Liga Panameña de Fútbol / Panama
+411 / Liga Panameña de Fútbol / Panama
+413 / Stars League / Qatar
+414 / Stars League / Qatar
+415 / Stars League / Qatar
+416 / 2nd Division League / Qatar
+417 / 2nd Division League / Qatar
+418 / 2nd Division League / Qatar
+419 / Pro League / Saudi-Arabia
+420 / Pro League / Saudi-Arabia
+421 / Pro League / Saudi-Arabia
+422 / Division 1 / Saudi-Arabia
+423 / Division 1 / Saudi-Arabia
+424 / Division 1 / Saudi-Arabia
+425 / Division 2 / Saudi-Arabia
+426 / Division 2 / Saudi-Arabia
+427 / Division 2 / Saudi-Arabia
+429 / Segunda Division / Uruguay
+430 / Segunda Division / Peru
+432 / NWSL Women / USA
+433 / Coupe de la Ligue / France
+434 / Coupe de la Ligue / France
+435 / Coupe de la Ligue / France
+436 / Coupe de France / France
+437 / Coupe de France / France
+438 / Coupe de France / France
+442 / Superliga / Albania
+443 / 1st Division / Albania
+444 / 1a Divisió / Andorra
+445 / 2a Divisió / Andorra
+446 / Cup / Bosnia
+447 / Premijer Liga / Bosnia
+448 / 1. Division / Belarus
+449 / 1. Division / Cyprus
+450 / 2. Division / Cyprus
+451 / 3. Division / Cyprus
+452 / Premier League / Jamaica
+453 / Botola 2 / Morocco
+454 / Indian Super League / India
+455 / I-League / India
+456 / I Liga / Poland
+457 / Erovnuli Liga 2 / Georgia
+458 / Erovnuli Liga / Georgia
+459 / Division 1 / Iceland
+460 / Canadian Soccer League / Canada
+461 / Esiliiga A / Estonia
+462 / Meistriliiga / Estonia
+463 / Premier League / Kuwait
+464 / Division 1 / Kuwait
+465 / Super Liga / Slovakia
+466 / Pacific Coast Soccer League / Canada
+467 / TFF 1. Lig / Turkey
+468 / TFF 2. Lig / Turkey
+469 / Premier League / Ukraine
+470 / Persha Liga / Ukraine
+471 / Primera Division / Guatemala
+472 / Liga Nacional / Guatemala
+473 / V.League 1 / Vietnam
+474 / Premier League / Armenia
+475 / First League / Armenia
+476 / Primera División / Bolivia
+477 / Czech Liga / Czech-Republic
+478 / FNL / Czech-Republic
+479 / First League / Montenegro
+480 / Second League / Montenegro
+481 / Brisbane Premier League / Australia
+482 / New South Wales NPL / Australia
+483 / Northern Territory Premier League / Australia
+484 / South Australia NPL / Australia
+485 / Victoria NPL / Australia
+486 / Western Australia NPL / Australia
+488 / Brasileiro Women / Brazil
+489 / Segunda Division / Paraguay
+490 / 1st Division / Albania
+491 / 1st Division / Albania
+492 / Premier Division / Ireland
+493 / First Division / Ireland
+494 / 1 Lyga / Lithuania
+495 / A Lyga / Lithuania
+496 / Superliga / Albania
+497 / Superliga / Albania
+498 / 1a Divisió / Andorra
+499 / 1a Divisió / Andorra
+500 / Primera División / Bolivia
+501 / 2a Divisió / Andorra
+502 / 2a Divisió / Andorra
+503 / First League / Armenia
+504 / First League / Armenia
+505 / Premier League / Armenia
+506 / Premier League / Armenia
+507 / Super League / Indonesia
+508 / Primera Division - Clausura / Paraguay
+509 / Primera Division - Clausura / Paraguay
+510 / Primera Division - Clausura / Paraguay
+511 / Premier League / Russia
+512 / Primera Division - Clausura / Uruguay
+513 / Primera Division - Clausura / Uruguay
+514 / Europa League / World
+515 / Superligaen / Denmark
+516 / Football National League / Russia
+517 / Ekstraklasa / Poland
+518 / USL Championship / USA
+519 / USL Championship / USA
+520 / USL Championship / USA
+521 / USL Championship / USA
+522 / USL League Two / USA
+523 / USL League Two / USA
+
+          ***
+
+524 / Premier League / England
+525 / Ligue 1 / France
+526 / Ligue 2 / France
+527 / Premier League / Ethiopia
+528 / Premier League / Ethiopia
+529 / Premier League / Ethiopia
+530 / Champions League / World
+531 / A PFG / Bulgaria
+532 / Super Liga / Serbia
+533 / Super Liga / Slovakia
+534 / Premier League / Ukraine
+535 / Prva HNL / Croatia
+536 / 1. Liga / Latvia
+537 / 1. Liga / Latvia
+538 / 1. Liga / Latvia
+539 / 1. Liga / Latvia
+540 / Virsliga / Latvia
+541 / Virsliga / Latvia
+542 / Virsliga / Latvia
+543 / Virsliga / Latvia
+544 / Division 2 / Iceland
+545 / Division 2 / Iceland
+546 / Division 2 / Iceland
+547 / Division 2 / Iceland
+548 / 1. Deild / Faroe-Islands
+549 / 1. Deild / Faroe-Islands
+550 / 1. Deild / Faroe-Islands
+551 / 1. Deild / Faroe-Islands
+552 / Meistaradeildin / Faroe-Islands
+553 / Meistaradeildin / Faroe-Islands
+554 / Meistaradeildin / Faroe-Islands
+555 / Meistaradeildin / Faroe-Islands
+556 / Premier League / Singapore
+557 / Premier League / Singapore
+558 / Premier League / Singapore
+559 / Premier League / Singapore
+560 / Super League / Uzbekistan
+561 / Super League / Uzbekistan
+562 / Super League / Uzbekistan
+563 / Super League / Uzbekistan
+564 / Liga 2 / Indonesia
+565 / Championship / England
+566 / Eredivisie / Netherlands
+567 / I Liga / Poland
+568 / Tipp3 Bundesliga / Austria
+571 / Eerste Divisie / Netherlands
+573 / Championship / Scotland
+574 / Premiership / Scotland
+575 / Prva Liga / Serbia
+576 / Super League / Switzerland
+577 / Erste Liga / Austria
+578 / Premijer Liga / Bosnia
+579 / Czech Liga / Czech-Republic
+580 / FNL / Czech-Republic
+581 / League One / England
+582 / League Two / England
+583 / DFB Pokal / Germany
+584 / Liga MX / Mexico
+585 / Challenge League / Switzerland
+586 / Liga Nacional / Guatemala
+587 / Ascenso MX / Mexico
+588 / Primera Division / Costa-Rica
+589 / Liga I / Romania
+590 / 1. Division / Belarus
+591 / 1. Division / Belarus
+592 / 1. Division / Belarus
+593 / Cup / Bosnia
+594 / Cup / Bosnia
+595 / Premijer Liga / Bosnia
+596 / Premijer Liga / Bosnia
+597 / Primera Division / El-Salvador
+598 / Primera Division / El-Salvador
+599 / Primera Division / El-Salvador
+600 / Primera Division / El-Salvador
+601 / J. League Div.3 / Japan
+602 / J. League Div.3 / Japan
+603 / J. League Div.3 / Japan
+604 / First League / Macedonia
+605 / First League / Macedonia
+606 / First League / Macedonia
+607 / Second League / Macedonia
+608 / Second League / Macedonia
+609 / 1. SNL / Slovenia
+610 / 1. SNL / Slovenia
+611 / 2. SNL / Slovenia
+612 / 2. SNL / Slovenia
+613 / National Football League / Fiji
+614 / National Football League / Fiji
+615 / National Football League / Fiji
+616 / National Football League / Fiji
+617 / Division d'Honneur / Guadeloupe
+618 / Division d'Honneur / Guadeloupe
+619 / Division d'Honneur / Guadeloupe
+620 / Ligue 1 / Guinea
+621 / Ligue 1 / Guinea
+622 / Ligue 1 / Guinea
+623 / Ligue Haïtienne / Haiti
+624 / Ligue Haïtienne / Haiti
+625 / Ligue Haïtienne / Haiti
+626 / Ligue Haïtienne / Haiti
+627 / Premier League / Hong-Kong
+628 / Premier League / Hong-Kong
+629 / Premier League / Hong-Kong
+630 / HKFA 1st Division / Hong-Kong
+631 / HKFA 1st Division / Hong-Kong
+632 / HKFA 1st Division / Hong-Kong
+633 / Liga Leumit / Israel
+634 / Liga Leumit / Israel
+635 / Liga Leumit / Israel
+636 / Liga Leumit / Israel
+637 / Ligat ha'Al / Israel
+638 / Ligat ha'Al / Israel
+639 / Ligat ha'Al / Israel
+640 / Ligat ha'Al / Israel
+641 / Ligue 1 / Ivory-Coast
+642 / Ligue 1 / Ivory-Coast
+643 / Ligue 1 / Ivory-Coast
+644 / Division 1 / Jordan
+645 / Division 1 / Jordan
+646 / Division 1 / Jordan
+647 / 1. Division / Kazakhstan
+648 / 1. Division / Kazakhstan
+649 / 1. Division / Kazakhstan
+650 / 1. Division / Kazakhstan
+651 / Premier League / Kazakhstan
+652 / Premier League / Kazakhstan
+653 / Premier League / Kazakhstan
+654 / Premier League / Kazakhstan
+655 / NB I / Hungary
+656 / Jupiler Pro League / Belgium
+657 / Premier League / Lebanon
+658 / Premier League / Lebanon
+659 / Premier League / Lebanon
+660 / Super League / Malawi
+661 / Super League / Malawi
+662 / First Division / Malta
+663 / First Division / Malta
+664 / First Division / Malta
+665 / First Division / Malta
+666 / Premier League / Malta
+667 / Premier League / Malta
+668 / Premier League / Malta
+669 / Premier League / Malta
+670 / Divizia Națională / Moldova
+671 / Divizia Națională / Moldova
+672 / Divizia Națională / Moldova
+673 / Divizia Națională / Moldova
+674 / Primera Division / Nicaragua
+675 / Primera Division / Nicaragua
+676 / Primera Division / Nicaragua
+677 / Ligue 1 / France
+678 / Ligue 1 / France
+679 / Ligue 1 / France
+680 / Ligue 1 / France
+681 / Ligue 1 / France
+682 / Ligue 1 / France
+683 / Primera Division / Argentina
+684 / Jupiler Pro League / Belgium
+685 / Jupiler Pro League / Belgium
+686 / Jupiler Pro League / Belgium
+687 / Jupiler Pro League / Belgium
+688 / Jupiler Pro League / Belgium
+689 / Jupiler Pro League / Belgium
+690 / Serie A / Brazil
+691 / Serie A / Brazil
+692 / Serie A / Brazil
+693 / Serie A / Brazil
+694 / Serie A / Brazil
+695 / Serie A / Brazil
+696 / Premier League / England
+697 / Premier League / England
+698 / Premier League / England
+699 / Premier League / England
+700 / Premier League / England
+701 / Premier League / England
+702 / Bundesliga 1 / Germany
+703 / Bundesliga 1 / Germany
+704 / Bundesliga 1 / Germany
+705 / Bundesliga 1 / Germany
+706 / Bundesliga 1 / Germany
+707 / Bundesliga 1 / Germany
+708 / Serie A / Italy
+709 / Serie A / Italy
+710 / Serie A / Italy
+711 / Serie A / Italy
+712 / Serie A / Italy
+713 / Serie A / Italy
+714 / Primera Division - Clausura / Paraguay
+715 / Persha Liga / Ukraine
+716 / B PFG / Bulgaria
+717 / Eredivisie / Netherlands
+718 / Eredivisie / Netherlands
+719 / Eredivisie / Netherlands
+720 / Eredivisie / Netherlands
+721 / Eredivisie / Netherlands
+722 / Eredivisie / Netherlands
+723 / Premier League / Kenya
+724 / Primeira Liga / Portugal
+725 / Primeira Liga / Portugal
+726 / Primeira Liga / Portugal
+727 / Primeira Liga / Portugal
+728 / Primeira Liga / Portugal
+729 / Primeira Liga / Portugal
+730 / Primera Division / Spain
+731 / Primera Division / Spain
+732 / Primera Division / Spain
+733 / Primera Division / Spain
+734 / Primera Division / Spain
+735 / Primera Division / Spain
+736 / Premiership / Scotland
+737 / Premiership / Scotland
+738 / Premiership / Scotland
+739 / Premiership / Scotland
+740 / Premiership / Scotland
+741 / Premiership / Scotland
+742 / Championship / Scotland
+743 / Championship / Scotland
+744 / Championship / Scotland
+745 / Championship / Scotland
+746 / Championship / Scotland
+747 / Championship / Scotland
+748 / 1st Division / Albania
+749 / World Cup / World
+750 / World Cup / World
+751 / Euro Championship / World
+752 / Euro Championship / World
+753 / Liga 3 / Germany
+754 / Bundesliga 1 / Germany
+755 / Bundesliga 2 / Germany
+756 / Liga Panameña de Fútbol / Panama
+757 / Viasat Divisionen / Denmark
+758 / FA Cup / England
+759 / FA Cup / England
+760 / FA Cup / England
+761 / NB II / Hungary
+762 / National / France
+763 / 2e Klasse / Belgium
+764 / National League / England
+765 / Liga de Honra / Portugal
+766 / Primeira Liga / Portugal
+767 / Taça de Portugal / Portugal
+768 / Taça de Portugal / Portugal
+769 / Taça de Portugal / Portugal
+770 / FA WSL / England
+771 / Women Bundesliga / Germany
+772 / First League / Montenegro
+773 / Primera Division / Guatemala
+774 / Premier Soccer League / South-Africa
+775 / Primera Division / Spain
+776 / Segunda Division / Spain
+777 / Liga De Ascenso / Costa-Rica
+778 / Premier League / Armenia
+779 / TFF 1. Lig / Turkey
+780 / Primera Division / Argentina
+781 / Premier / Wales
+782 /  Super Lig / Turkey
+783 / Coupe de la Ligue / France
+784 / KNVB Beker / Netherlands
+785 / Primera Division / Nicaragua
+786 / 1. Division / Cyprus
+787 / Super League / Greece
+788 / Feminine Division 1 / France
+789 / Arabian Gulf League / United-Arab-Emirates
+790 / Girabola / Angola
+791 / Girabola / Angola
+792 / Girabola / Angola
+793 / Cup / Austria
+794 / Cup / Austria
+795 / Cup / Austria
+796 / Cup / Austria
+797 / Premier League / Bangladesh
+798 / Premier League / Bangladesh
+799 / Cup / Bulgaria
+800 / Cup / Bulgaria
+801 / Cup / Greece
+802 / Magyar Kupa / Hungary
+803 / Friendlies / World
+804 / NPFL / Nigeria
+805 / Super League / Zambia
+806 / Premier Soccer League / Zimbabwe
+807 / Sudani Premier League / Sudan
+808 / Copa del Rey / Spain
+809 / Ligue 1 / Senegal
+810 / Campionato / San-Marino
+811 / National Soccer League / Rwanda
+812 / Professional League / Oman
+813 / Championship / Northern-Ireland
+814 / Premiership / Northern-Ireland
+815 / Premier League / Namibia
+816 / Divizia A / Moldova
+817 / C-League / Cambodia
+818 / Elite ONE / Cameroon
+819 / Premier League / Botswana
+820 / Super League / Bhutan
+821 / Premier League / Bermuda
+822 / Championnat National / Benin
+823 / Premier League / Belize
+824 / Premier League / Belize
+825 / Premier League / Bahrain
+826 / Birinci Dasta / Azerbaidjan
+827 / Premyer Liqa / Azerbaidjan
+828 / Cup / Azerbaidjan
+829 / NPFL / Nigeria
+830 / NPFL / Nigeria
+831 / NPFL / Nigeria
+832 / Super League / Zambia
+833 / Super League / Zambia
+834 / Super League / Zambia
+835 / Premier Soccer League / Zimbabwe
+836 / Premier Soccer League / Zimbabwe
+837 / Premier Soccer League / Zimbabwe
+838 / Friendlies / World
+839 / Friendlies / World
+840 / Sudani Premier League / Sudan
+841 / Sudani Premier League / Sudan
+842 / Ligue 1 / Senegal
+843 / Ligue 1 / Senegal
+844 / Campionato / San-Marino
+845 / Campionato / San-Marino
+846 / Sudani Premier League / Sudan
+847 / Elite ONE / Cameroon
+848 / Elite ONE / Cameroon
+849 / Elite ONE / Cameroon
+850 / C-League / Cambodia
+851 / C-League / Cambodia
+852 / C-League / Cambodia
+853 / Birinci Dasta / Azerbaidjan
+854 / Birinci Dasta / Azerbaidjan
+855 / Premyer Liqa / Azerbaidjan
+856 / Premyer Liqa / Azerbaidjan
+857 / Cup / Azerbaidjan
+858 / Cup / Azerbaidjan
+859 / Premier League / Bahrain
+860 / Premier League / Bahrain
+861 / Championnat National / Benin
+862 / Premier League / Bermuda
+863 / Premier League / Bermuda
+864 / Super League / Bhutan
+865 / Super League / Bhutan
+866 / Super League / Bhutan
+867 / Premier League / Botswana
+868 / Premier League / Botswana
+869 / Coppa Italia / Italy
+870 / Liga Nacional de Fútbol / Honduras
+871 / Stars League / Qatar
+873 / Division 1 / Wales
+874 / Premier League / Bangladesh
+875 / Primera Division / El-Salvador
+876 / Copa Chile / Chile
+877 / FA Cup / China
+878 / Copa Colombia / Colombia
+879 / Cup / Croatia
+880 / Cup / Belgium
+881 / DBU Pokalen / Denmark
+882 / Suomen Cup / Finland
+883 / Cup / Iceland
+884 / League Cup / Iceland
+885 / FAI Cup / Ireland
+886 / League Cup / Ireland
+887 / State Cup / Israel
+888 / Toto Cup Ligat Al / Israel
+889 / J-League Cup / Japan
+890 / Copa MX / Mexico
+891 / Serie A / Italy
+892 / Liga II / Romania
+893 / Ligue 1 / Algeria
+894 / First League / Macedonia
+895 / Second League / Montenegro
+896 / Cup / Croatia
+897 / Ligue Professionnelle 1 / Tunisia
+898 / Druga HNL / Croatia
+899 / Primera B Nacional / Argentina
+900 / Division 1 / Saudi-Arabia
+901 / Pro League / Saudi-Arabia
+902 / Serie B / Italy
+903 / First League / Armenia
+904 / Ligue 2 / Algeria
+905 / Premyer Liqa / Azerbaidjan
+907 / Superliga / Albania
+908 / Second League / Macedonia
+909 / Birinci Dasta / Azerbaidjan
+910 / Cup / Greece
+911 / Division d'Honneur / Guadeloupe
+912 / Premier League / Hong-Kong
+913 / State Cup / Israel
+914 / TFF 2. Lig / Turkey
+915 / League Cup / United-Arab-Emirates
+916 / Super League Women / Belgium
+917 / Eredivisie Women / Netherlands
+918 / Ligue 1 / Ivory-Coast
+919 / Taça de Portugal / Portugal
+920 / Primera Division Women / Spain
+921 / 2. Division / Cyprus
+922 / Serie C / Italy
+923 / Persian Gulf Cup / Iran
+924 / Premier League / Botswana
+925 / Botola Pro / Morocco
+926 / Premier League / Kuwait
+927 / Botola 2 / Morocco
+928 / Division 1 / Kuwait
+930 / Cup / Bulgaria
+931 / HKFA 1st Division / Hong-Kong
+932 / 3. Division / Cyprus
+933 / Premier League / Jamaica
+934 / Indian Super League / India
+935 / CONMEBOL Sudamericana / World
+936 / CAF Champions League / World
+937 / CONMEBOL Libertadores / World
+938 / Welsh Cup / Wales
+939 / Cup / Ukraine
+940 / Cup / Turkey
+941 / FA Cup / Thailand
+942 / Schweizer Pokal / Switzerland
+943 / Svenska Cupen / Sweden
+944 / Cup / Slovenia
+945 / FA Cup / Scotland
+946 / Challenge Cup / Scotland
+947 / Cup / Russia
+948 / Cupa României / Romania
+949 / Taça da Liga / Portugal
+950 / Cup / Poland
+951 / NM Cupen / Norway
+952 / FA Cup / South-Korea
+953 / Emperor Cup / Japan
+954 / Santosh Trophy / India
+955 / EFL Trophy / England
+956 / FA Trophy / England
+957 / League Cup / England
+958 / Cup / Czech-Republic
+959 / Cup / Cyprus
+960 / Super League / Zambia
+961 / Sudani Premier League / Sudan
+962 / Cupa României / Romania
+963 / Azadegan League / Iran
+964 / Professional League / Oman
+965 / 1st Division / Albania
+966 / 2a Divisió / Andorra
+967 / Premier League / Bahrain
+968 / 1a Divisió / Andorra
+970 / Campionato / San-Marino
+971 / Premier League / Lebanon
+972 / Premier League / Egypt
