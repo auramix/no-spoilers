@@ -27,9 +27,9 @@ class App extends Component{
     let url = `/fixtures/league/${this.state.competition}/${this.state.matchDate}`;
 
     axios.get(url, config)
-      .then(response => {
+      .then(response => { // Gets fixtures for given date and fetches events for each
         var fixtures = response.data.api.fixtures;
-        this.setState({fixtures: fixtures});
+        // this.setState({fixtures: fixtures});
         // console.log('Fixtures - ', fixtures);
 
         var fixtureEvents = fixtures.map(fixture => {
@@ -40,14 +40,13 @@ class App extends Component{
 
         return Promise.all(fixtureEvents);
       })
-      .then(fixtureEvents => {
+      .then(fixtureEvents => { // Adds match events to each fixture
         console.log('Event values for fixtures', fixtureEvents);
-        let fixtures = this.state.fixtures.slice();
 
         fixtures.forEach((fixture, i) => {
           fixture.events = fixtureEvents[i].data.api.events;
         })
-        this.setState({fixtures: fixtures})
+        // this.setState({fixtures: fixtures})
       })
       .catch(err => {
         console.log('Error: axios get request - ', err);
