@@ -1,23 +1,3 @@
-var rankMatches = function (matches) {
-
-  for (let i = 0; i < matches.length; i += 1) {
-    let selectedMatch = matches.shift();
-
-    // Compare selected match against averages in statistics categories
-    // Give a rank
-  }
-}
-
-//*Outcome changes *// - 40%
-//* Goals*// - 25%
-//*Number of events*// -10%
-//* Number of shots on goal*// - 10%
-//* Possesion differential*// - 10%
-//* Saves*//-5%
-
-//TODO
-//* reducedBy = (possiblePointTotal / numberParticipants), first rank gets total possible points, next gets previousTotal-reducedBy
-
 /* {data, ranking, stats: {
   resultChanges,
   goals,
@@ -27,9 +7,36 @@ var rankMatches = function (matches) {
   saves
 }}*/
 
+var rankMatches = function (matches) {
+  let ranks = {
+    'resultChanges': 40,
+    'goals': 25,
+    'numEvents': 10,
+    'numShotsOnGoal': 10,
+    'possDiff': 10,
+    'saves': 5
+  }
+
+  let numOfMatches = matches.length;
+
+  // Sort matches based on category rank and add appropriate number of ranking points to total;
+  for (let prop in ranks) {
+    let totalPossible = ranks[prop];
+    let reduceBy = (totalPossible / numOfMatches);
+
+    matches = matches.sort((a, b) => b.stats[prop] - a.stats[prop])
+    for (let i = 0; i < numOfMatches; i += 1) {
+     i === 0 ? matches[i].ranking += totalPossible : matches[i].ranking += (totalPossible - reduceBy * i);
+    }
+  }
+
+  return matches.sort((a, b) => a.ranking - b.ranking)
+}
+
 // Compiles match stats into one object and adds it to the data object
 var statsDecorator = function (matchObj, statsObj) {
   matchObj.stats = {};
+  matchObj.ranking = 0;
 
   let homeShots = statsObj['Shots on Goal']['home'] === '' ? 0 : parseInt(statsObj['Shots on Goal']['home']);
   let awayShots = statsObj['Shots on Goal']['away'] === '' ? 0 : parseInt(statsObj['Shots on Goal']['away']);
