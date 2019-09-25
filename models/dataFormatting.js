@@ -26,7 +26,7 @@ var rankMatches = function (matches) {
 
     matches = matches.sort((a, b) => b.stats[prop] - a.stats[prop])
     for (let i = 0; i < numOfMatches; i += 1) {
-     i === 0 ? matches[i].ranking += totalPossible : matches[i].ranking += (totalPossible - reduceBy * i);
+      i === 0 ? matches[i].ranking += totalPossible : matches[i].ranking += (totalPossible - reduceBy * i);
     }
   }
 
@@ -57,7 +57,10 @@ var numResultChanges = function (matchObj) {
   let events = matchObj.events;
   let homeId = matchObj.homeTeam.team_id;
   let awayId = matchObj.awayTeam.team_id;
-  let matchScore = [home, away] = [[homeId, 0], [awayId, 0]];
+  let matchScore = [home, away] = [
+    [homeId, 0],
+    [awayId, 0]
+  ];
   let previousState = 'draw';
   let resultChanges = 0;
 
@@ -100,4 +103,11 @@ var decorateFixtures = function (fixtures, stats) {
     statsDecorator(fixtures[i], stats[i])
     numResultChanges(fixture[i]);
   }
+}
+
+module.exports = {
+  rankMatches,
+  statsDecorator,
+  numResultChanges,
+  decorateFixtures
 }
