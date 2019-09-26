@@ -1,17 +1,18 @@
-import React, { Component} from "react";
+import React, {
+  Component
+} from "react";
 import "./App.css";
 import CompDropDown from "./components/CompDropDown.jsx";
 import DatePicker from "./components/DatePicker.jsx";
 import axios from "axios";
-import config from "../server/axios/get_config";
 
-class App extends Component{
+class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       competition: '',
       matchDate: '',
-      fixtures: []
+      rankedMatches: []
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -19,56 +20,64 @@ class App extends Component{
 
   handleChange(e) {
     let name = e.target.name;
-    this.setState({[name]: e.target.value})
+    this.setState({
+      [name]: e.target.value
+    })
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    let url = `/fixtures/league/${this.state.competition}/${this.state.matchDate}`;
 
-    axios.get(url, config)
-      .then(response => { // Gets fixtures for given date and fetches events for each
-        var fixtures = response.data.api.fixtures;
-        // this.setState({fixtures: fixtures});
-        // console.log('Fixtures - ', fixtures);
-
-        var fixtureEvents = fixtures.map(fixture => {
-          let fixtureId = fixture.fixture_id;
-          let url = `/events/${fixtureId}`;
-          return axios.get(url, config);
-        });
-
-        return Promise.all(fixtureEvents);
+    axios.get('/fixtures', {
+        params: {
+          competition: this.stats.competition,
+          date: this.state.matchDate
+        }
       })
-      .then(fixtureEvents => { // Adds match events to each fixture
-        console.log('Event values for fixtures', fixtureEvents);
-
-        fixtures.forEach((fixture, i) => {
-          fixture.events = fixtureEvents[i].data.api.events;
-        })
-        // this.setState({fixtures: fixtures})
+      .then(response => {
+        this.setState({
+          rankedMatches: response.data
+        });
       })
       .catch(err => {
         console.log('Error: axios get request - ', err);
       })
   }
 
-  render(){
-    return(
-      <div className="App">
-        <h1> Welcome to No Spoilers </h1>
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <CompDropDown onChange={this.handleChange}/>
-            <div>
-              <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange}/>
-            </div>
-            <div>
-              <input type="submit" value="Find Matches"></input>
-            </div>
-          </form>
-        </div>
-      </div>
+  render() {
+    return ( < div className = "App" >
+      <
+      h1 > Welcome to No Spoilers < /h1> </div >
+      <
+      form onSubmit = {
+        this.handleSubmit
+      } >
+      <
+      CompDropDown onChange = {
+        this.handleChange
+      }
+      /> <
+      div >
+      <
+      DatePicker name = "matchDate"
+      id = "matchDate"
+      text = "Select Match Date:"
+      value = {
+        this.state.matchDate
+      }
+      onChange = {
+        this.handleChange
+      }
+      /> < /
+      div > <
+      div >
+      <
+      input type = "submit"
+      value = "Find Matches" > < /input> < /
+      div > <
+      /form> < /
+      div > <
+      /div>
     );
   }
 }

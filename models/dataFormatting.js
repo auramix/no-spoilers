@@ -6,6 +6,23 @@
   possDiff,
   saves
 }}*/
+var formatMatches = function (matches) {
+  let competition = matches[0].league_id;
+  let date = matches[0].event_date.substring(0, 10)
+  let fixtures = matches.map((fixture) => {
+    return {
+      'competition': competition,
+      'homeTeam': fixture.homeTeam,
+      'awayTeam': fixture.awayTeam,
+      'ranking': fixture.ranking
+    }
+  })
+  return {
+    'competition': competition,
+    'date': date,
+    'fixtures': fixtures
+  }
+}
 
 var rankMatches = function (matches) {
   let ranks = {
@@ -122,5 +139,6 @@ module.exports = {
   rankMatches,
   statsDecorator,
   numResultChanges,
-  decorateFixtures
+  decorateFixtures,
+  formatMatches
 }
