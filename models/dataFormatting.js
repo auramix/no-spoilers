@@ -27,8 +27,19 @@ var rankMatches = function (matches) {
     matches = matches.sort((a, b) => {
       return prop === 'possDiff' ? a.stats[prop] - b.stats[prop] : b.stats[prop] - a.stats[prop]
     })
+
+    // If the ranked stat count equals that of the previous rank, we should attribute the same number of ranking points.
+    let differentStatCount = 0;
     for (let i = 0; i < numOfMatches; i += 1) {
-      i === 0 ? matches[i].ranking += totalPossible : matches[i].ranking += (totalPossible - reduceBy * i);
+      let statsPropertyVal = matches[i]['stats'][prop];
+      if (i === 0) {
+        matches[i].ranking += totalPossible
+      } else if (statsPropertyVal === matches[i - 1]['stats'][prop]) {
+        matches[i].ranking += (totalPossible - reduceBy * differentStatCount);
+      } else {
+        differentStatCount += 1;
+        matches[i].ranking += (totalPossible - reduceBy * differentStatCount);
+      }
     }
   }
 
