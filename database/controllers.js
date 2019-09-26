@@ -15,7 +15,7 @@ var findFixtures = function (competition, date, cb) {
 }
 
 var insertFixtures = function (fixtures, cb) {
-  db.Fixtures.updateOne(fixtures, function (err, result) {
+  db.Fixtures.create(fixtures, function (err, result) {
     if (err) {
       console.log('Mongo Insert Error: '.err);
       cb(err);
