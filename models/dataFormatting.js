@@ -24,13 +24,15 @@ var rankMatches = function (matches) {
     let totalPossible = ranks[prop];
     let reduceBy = (totalPossible / numOfMatches);
 
-    matches = matches.sort((a, b) => b.stats[prop] - a.stats[prop])
+    matches = matches.sort((a, b) => {
+      return prop === 'possDiff' ? a.stats[prop] - b.stats[prop] : b.stats[prop] - a.stats[prop]
+    })
     for (let i = 0; i < numOfMatches; i += 1) {
       i === 0 ? matches[i].ranking += totalPossible : matches[i].ranking += (totalPossible - reduceBy * i);
     }
   }
 
-  return matches.sort((a, b) => a.ranking - b.ranking)
+  return matches.sort((a, b) => b.ranking - a.ranking)
 }
 
 // Compiles match stats into one object and adds it to the data object
@@ -101,7 +103,7 @@ var numResultChanges = function (matchObj) {
 var decorateFixtures = function (fixtures, stats) {
   for (let i = 0; i < fixtures.length; i += 1) {
     statsDecorator(fixtures[i], stats[i])
-    numResultChanges(fixture[i]);
+    numResultChanges(fixtures[i]);
   }
 }
 
