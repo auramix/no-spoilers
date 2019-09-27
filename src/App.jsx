@@ -1,10 +1,10 @@
 import React, {
   Component
 } from "react";
-import "./App.css";
 import CompDropDown from "./components/CompDropDown.jsx";
 import DatePicker from "./components/DatePicker.jsx";
 import axios from "axios";
+import { StyledDiv, WrapperDiv } from "./styles/styling.js"
 
 class App extends Component {
   constructor(props) {
@@ -67,17 +67,17 @@ class App extends Component {
     return (
       <div className="App">
         <h1> Welcome to No Spoilers </h1>
-        <div>
-          <form onSubmit={this.handleSubmit}>
+        <WrapperDiv>
+          <div onSubmit={this.handleSubmit}>
             <CompDropDown onChange={this.handleChange} />
             <div>
               <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
             </div>
-            <div>
+            <StyledDiv>
               <input type="submit" value="Find Matches"></input>
-            </div>
-          </form>
-        </div>
+            </StyledDiv>
+          </ div>
+        </WrapperDiv>
       </div>
     );
   }

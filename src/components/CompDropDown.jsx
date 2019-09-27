@@ -1,8 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const DropDownDiv = styled.div`
+  margin: 10px;
+`;
 
 function CompDropDown(props) {
   return (
-    <div>
+    <DropDownDiv>
       <label htmlFor="competition" onChange={props.onChange}>Select a competition:
         <select id="comp-list" name="competition">
           <option value="">--Please choose a competition--</option>
@@ -15,7 +20,7 @@ function CompDropDown(props) {
           <option value="1">World Cup</option>
         </select>
       </label>
-    </div>
+    </DropDownDiv>
   )
 }
 
