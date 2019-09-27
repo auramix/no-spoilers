@@ -33,55 +33,51 @@ app.get('/fixtures/:comp/:date', function (req, res) {
 app.get('/api/fixtures/:comp/:date', function (req, res) {
   let comp = req.params.comp;
   let date = req.params.date;
-  // let url = `/fixtures/league/${comp}/${date}`;
-  let url = `/events/`;
+  let url = `/fixtures/league/${comp}/${date}`;
 
   axios.get(url, config)
     .then(response => { // Gets fixtures for given date and fetches events for each
       var fixtures = response.data.api.fixtures;
 
       var fixtureEvents = fixtures.map(fixture => {
-        // console.log(fixture);
-        let fixtureId = fixture.fixture_id;
-        let url = `/events/${fixtureId}`;
-        console.log(url, config);
-        return axios.get(url, config);
+        var fixtureId = fixture.fixture_id;
+        var myurl = `/events/${fixtureId}`;
+        return axios.get(myurl, config);
       });
       // console.log('getting events', fixtureEvents);
-      return Promise.all(fixtureEvents);
-    })
-    .then(results => {
-      res.status(200).send(results.data);
+      Promise.all(fixtureEvents)
+        .then(fixtureEvents => { // Adds match events to each fixture
+          fixtures.forEach((fixture, i) => {
+            fixture.events = fixtureEvents[i].data.api.events;
+          })
+          var fixtureStats = fixtures.map((fixture) => {
+            var fixtureId = fixture.fixture_id;
+            var url = `/statistics/fixture/${fixtureId}`;
+            console.log('Fixture url', url);
+            return axios.get(url, config);
+          })
+
+          Promise.all(fixtureStats)
+            .then(statistics => {
+
+              statistics = statistics.map((stats) => {
+                return stats.data.api.statistics;
+              })
+
+              models.decorateFixtures(fixtures, statistics);
+              let rankedMatches = models.rankMatches(fixtures);
+              rankedMatches = models.formatMatches(rankedMatches);
+              res.status(200).json(rankedMatches);
+            })
+            .catch(err => {
+              res.status(500).send(err);
+            })
+        })
     })
     .catch(err => {
       res.status(500).send(err);
     })
-  // .then(fixtureEvents => { // Adds match events to each fixture
-  //   console.log('FIXTURES', fixtures)
-  //   fixtures.forEach((fixture, i) => {
-  //     fixture.events = fixtureEvents[i].data.api.events;
-  //   })
-  //   console.log('FIXTURES W/EVENTS', fixtures)
-  //   return fixtures;
-  // })
-  // .then(fixtures => {
-  //   var fixtureStats = fixtures.map(() => {
-  //     let fixtureId = fixture.fixtureId;
-  //     let url = `/statistics/fixture/${fixtureId}`;
-  //     return axios.get(url, config);
-  //   })
-  //   console.log('getting stats');
-  //   return Promise.all(fixtureStats);
-  // })
-  // .then(statistics => {
-  //   let stats = statistics.data.api.statistics;
-  //   models.decorateFixtures(fixtures, stats);
-  //   let rankedMatches = models.rankMatches(fixtures);
-  //   rankedMatches = models.formatMatches(rankedMatches);
-  //   res.status(200).json(rankedMatches);
-  // })
-
-})
+});
 
 app.post('/fixtures', function (req, res) {
   api.insertFixtures(req.body, function (err, result) {

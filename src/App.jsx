@@ -33,19 +33,34 @@ class App extends Component {
     axios.get(`/fixtures/${this.state.competition}/${this.state.matchDate}`, { timeout: 10000 })
       .then(response => {
         if (response.data !== null) {
+          console.log('Retrieved cached results!')
           this.setState({
             rankedMatches: response.data.fixtures
           });
         } else {
-          return axios.get(`/api/fixtures/${comp}/${date}`)
+          axios.get(`/api/fixtures/${comp}/${date}`)
+            .then((response) => {
+              console.log('OUR RESPONSE', response.data);
+              this.setState({
+                rankedMatches: response.data.fixtures
+              });
+              return response.data;
+            })
+            .then((data) => {
+              console.log('attempting to post data');
+              return axios.post('/fixtures', {
+                data: data
+              })
+            })
+            .catch(err => {
+              console.log('Error: axios get request - ', err);
+            })
         }
-      })
-      .then((response) => {
-        console.log('OUR RESPONSE', response.data);
       })
       .catch(err => {
         console.log('Error: axios get request - ', err);
       })
+
   }
 
   render() {
