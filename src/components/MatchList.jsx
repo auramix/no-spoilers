@@ -7,31 +7,48 @@ const StyledDivLi = styled.div`
   display: block;
   margin: 10px;
   height: 100px;
-  width: 300px;
+  width: fit-content;
+  border: solid thin;
+  border-color: black;
+  border-radius: 2%;
 `;
 
 const MatchWrapper = styled.div`
   display: block;
-  padding: 30px 0px;
-`;
+  margin: 0;
+  padding: 10px 5px 20px 5px;
+  `;
 
-
-const BadgeDiv = styled.div`
-  background-image: url(${props => props.image});
+const ImageDiv = styled.div`
   position: relative;
-  display: inline-block;
+  display: block;
+  margin: auto;
   height: 48px;
   width: 48px;
+  background-image: url(${props => props.image});
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+`;
+
+const BadgeDiv = styled.div`
+  display: inline-block;
+  height: 75px;
+  width: 75px;
   margin: ${props => props.team === 'home' ? '5px 80px 5px 5px' : '5px 5px 5px 80px'};
-  ::after {
-    content: ${props => props.teamName};
-  }
+`;
+
+const TeamSpan = styled.span`
+  display: table;
+  margin: auto;
+  position: relative;
 `;
 
 const Versus = styled.span`
-  margin: 0px;
+  vertical-align: middle;
+  display: inline-table;
+  margin-bottom: 50px;
+}
 `;
 
 
@@ -39,9 +56,15 @@ function MatchItem(props) {
   return (
     <StyledDivLi>
       <MatchWrapper>
-        <BadgeDiv image={props.homeImg} teamName={props.homeTeam} awayName={null} team={"home"}></BadgeDiv>
+        <BadgeDiv team={"home"}>
+          <ImageDiv image={props.homeImg} />
+          <TeamSpan team={"home"}>{props.homeTeam}</TeamSpan>
+        </BadgeDiv>
         <Versus>vs</Versus>
-        <BadgeDiv image={props.awayImg} teamName={props.awayTeam} homeName={null} team={"away"}></BadgeDiv>
+        <BadgeDiv image={props.awayImg} team={"away"}>
+          <ImageDiv image={props.awayImg} />
+          <TeamSpan team={"away"}>{props.awayTeam}</TeamSpan>
+        </BadgeDiv>
       </MatchWrapper>
     </StyledDivLi>
   )
@@ -50,8 +73,8 @@ function MatchItem(props) {
 
 
 const StyledUl = styled.ul`
-  display: inline-block
-  padding: 0px;
+display: inline - block
+padding: 0px;
 `;
 
 function MatchList(props) {

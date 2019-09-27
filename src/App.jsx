@@ -5,7 +5,7 @@ import CompDropDown from "./components/CompDropDown.jsx";
 import DatePicker from "./components/DatePicker.jsx";
 import { MatchList, MatchItem } from "./components/MatchList.jsx";
 import axios from "axios";
-import { StyledDiv, WrapperDiv } from "./styles/styling.js";
+import { StyledDiv, FormWrapper } from "./styles/styling.js";
 
 class App extends Component {
   constructor(props) {
@@ -70,7 +70,7 @@ class App extends Component {
     return (
       <div className="App">
         <h1> Welcome to No Spoilers </h1>
-        <WrapperDiv>
+        <FormWrapper>
           <form onSubmit={this.handleSubmit}>
             <CompDropDown onChange={this.handleChange} />
             <div>
@@ -80,7 +80,7 @@ class App extends Component {
               <input type="submit" value="Find Matches"></input>
             </StyledDiv>
           </ form>
-        </WrapperDiv>
+        </FormWrapper>
         <MatchList>
           {gamesList}
         </MatchList>
