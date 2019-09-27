@@ -6,28 +6,43 @@ import styled from 'styled-components';
 const StyledDivLi = styled.div`
   display: block;
   margin: 10px;
+  height: 100px;
+  width: 300px;
 `;
 
+const MatchWrapper = styled.div`
+  display: block;
+  padding: 30px 0px;
+`;
+
+
 const BadgeDiv = styled.div`
-  background-image: ${props => props.image};
+  background-image: url(${props => props.image});
   position: relative;
-  margin: 8px;
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  background-position: center;
+  background-size: cover;
+  margin: ${props => props.team === 'home' ? '5px 80px 5px 5px' : '5px 5px 5px 80px'};
   ::after {
-    content: ${props => props.teamName}
+    content: ${props => props.teamName};
   }
 `;
 
 const Versus = styled.span`
-  margin: 80px;
+  margin: 0px;
 `;
 
 
 function MatchItem(props) {
   return (
     <StyledDivLi>
-      <BadgeDiv image={props.homeImg} teamName={props.homeTeam}></BadgeDiv>
-      <Versus>vs</Versus>
-      <BadgeDiv image={props.awayImg} teamName={props.awayTeam}></BadgeDiv>
+      <MatchWrapper>
+        <BadgeDiv image={props.homeImg} teamName={props.homeTeam} awayName={null} team={"home"}></BadgeDiv>
+        <Versus>vs</Versus>
+        <BadgeDiv image={props.awayImg} teamName={props.awayTeam} homeName={null} team={"away"}></BadgeDiv>
+      </MatchWrapper>
     </StyledDivLi>
   )
 };
@@ -36,13 +51,14 @@ function MatchItem(props) {
 
 const StyledUl = styled.ul`
   display: inline-block
+  padding: 0px;
 `;
 
 function MatchList(props) {
   return (
-    <StyleUl>
+    <StyledUl>
       {props.children}
-    </StyleUl>
+    </StyledUl>
   )
 };
 

@@ -3,8 +3,9 @@ import React, {
 } from "react";
 import CompDropDown from "./components/CompDropDown.jsx";
 import DatePicker from "./components/DatePicker.jsx";
+import { MatchList, MatchItem } from "./components/MatchList.jsx";
 import axios from "axios";
-import { StyledDiv, WrapperDiv } from "./styles/styling.js"
+import { StyledDiv, WrapperDiv } from "./styles/styling.js";
 
 class App extends Component {
   constructor(props) {
@@ -64,11 +65,13 @@ class App extends Component {
   }
 
   render() {
+    var gamesList = this.state.rankedMatches.map(game => <MatchItem key={game._id} homeImg={game.homeTeam.logo} homeTeam={game.homeTeam.team_name} awayImg={game.awayTeam.logo} awayTeam={game.awayTeam.team_name} />);
+
     return (
       <div className="App">
         <h1> Welcome to No Spoilers </h1>
         <WrapperDiv>
-          <div onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <CompDropDown onChange={this.handleChange} />
             <div>
               <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
@@ -76,8 +79,11 @@ class App extends Component {
             <StyledDiv>
               <input type="submit" value="Find Matches"></input>
             </StyledDiv>
-          </ div>
+          </ form>
         </WrapperDiv>
+        <MatchList>
+          {gamesList}
+        </MatchList>
       </div>
     );
   }
