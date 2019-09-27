@@ -2,6 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 
+const colorRank = function (ranking) {
+  const rgb = [60, 181, 84];
+
+  let r = 195;
+  let g = 74;
+  let b = 171;
+
+  let percentage = 100 - Math.floor(ranking);
+  let newR = Math.floor(rgb[0] + r * (percentage / 100));
+  let newG = Math.floor(rgb[1] + g * (percentage / 100));
+  let newB = Math.floor(rgb[2] + b * (percentage / 100));
+
+  return `rgb(${newR}, ${newG}, ${newB})`;
+}
+
+
 
 const StyledDivLi = styled.div`
   display: block;
@@ -11,6 +27,7 @@ const StyledDivLi = styled.div`
   border: solid thin;
   border-color: black;
   border-radius: 2%;
+  background-color: ${props => colorRank(props.ranking)};
 `;
 
 const MatchWrapper = styled.div`
@@ -42,6 +59,7 @@ const TeamSpan = styled.span`
   display: table;
   margin: auto;
   position: relative;
+  white-space: nowrap
 `;
 
 const Versus = styled.span`
@@ -54,7 +72,7 @@ const Versus = styled.span`
 
 function MatchItem(props) {
   return (
-    <StyledDivLi>
+    <StyledDivLi ranking={props.ranking}>
       <MatchWrapper>
         <BadgeDiv team={"home"}>
           <ImageDiv image={props.homeImg} />
@@ -73,9 +91,8 @@ function MatchItem(props) {
 
 
 const StyledUl = styled.ul`
-display: inline - block
-padding: 0px;
-`;
+  display: inline-block;
+  padding: 0px 0px 0px 10px;`;
 
 function MatchList(props) {
   return (

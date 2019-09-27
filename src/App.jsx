@@ -5,7 +5,7 @@ import CompDropDown from "./components/CompDropDown.jsx";
 import DatePicker from "./components/DatePicker.jsx";
 import { MatchList, MatchItem } from "./components/MatchList.jsx";
 import axios from "axios";
-import { StyledDiv, FormWrapper } from "./styles/styling.js";
+import { StyledDiv, FormWrapper, AppWrapper } from "./styles/styling.js";
 
 class App extends Component {
   constructor(props) {
@@ -65,25 +65,27 @@ class App extends Component {
   }
 
   render() {
-    var gamesList = this.state.rankedMatches.map(game => <MatchItem key={game._id} homeImg={game.homeTeam.logo} homeTeam={game.homeTeam.team_name} awayImg={game.awayTeam.logo} awayTeam={game.awayTeam.team_name} />);
+    var gamesList = this.state.rankedMatches.map((game, i) => <MatchItem key={game._id || 'k' + i} homeImg={game.homeTeam.logo} homeTeam={game.homeTeam.team_name} awayImg={game.awayTeam.logo} awayTeam={game.awayTeam.team_name} ranking={game.ranking} />);
 
     return (
       <div className="App">
-        <h1> Welcome to No Spoilers </h1>
-        <FormWrapper>
-          <form onSubmit={this.handleSubmit}>
-            <CompDropDown onChange={this.handleChange} />
-            <div>
-              <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
-            </div>
-            <StyledDiv>
-              <input type="submit" value="Find Matches"></input>
-            </StyledDiv>
-          </ form>
-        </FormWrapper>
-        <MatchList>
-          {gamesList}
-        </MatchList>
+        <AppWrapper>
+          <h1> Welcome to No Spoilers </h1>
+          <FormWrapper>
+            <form onSubmit={this.handleSubmit}>
+              <CompDropDown onChange={this.handleChange} />
+              <div>
+                <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
+              </div>
+              <StyledDiv>
+                <input type="submit" value="Find Matches"></input>
+              </StyledDiv>
+            </ form>
+          </FormWrapper>
+          <MatchList>
+            {gamesList}
+          </MatchList>
+        </AppWrapper>
       </div>
     );
   }

@@ -11,8 +11,14 @@ const FormWrapper = styled.div `
   border-radius: 2%;
 `;
 
+const AppWrapper = styled.div `
+margin: 5% 50%;
+height: fit-content;
+width: 500px;`;
+
 
 export {
   StyledDiv,
-  FormWrapper
+  FormWrapper,
+  AppWrapper
 };
