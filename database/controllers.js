@@ -1,6 +1,7 @@
 var db = require('./index.js');
 
 var findFixtures = function (competition, date, cb) {
+  console.log(competition, date);
   db.Fixtures.findOne({
     competition: competition,
     date: date
