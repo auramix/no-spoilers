@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
-// Checks DB for data, and calls our stats api if not
+// Checks DB for data
 app.get('/fixtures/:comp/:date', function (req, res) {
   let comp = req.params.comp;
   let date = req.params.date;
@@ -29,7 +29,7 @@ app.get('/fixtures/:comp/:date', function (req, res) {
   })
 });
 
-// Calls stats api
+// Fetches data from our api, and reformats it before sending back to the client
 app.get('/api/fixtures/:comp/:date', function (req, res) {
   let comp = req.params.comp;
   let date = req.params.date;
@@ -44,13 +44,12 @@ app.get('/api/fixtures/:comp/:date', function (req, res) {
         var myurl = `/events/${fixtureId}`;
         return axios.get(myurl, config);
       });
-      // console.log('getting events', fixtureEvents);
       Promise.all(fixtureEvents)
-        .then(fixtureEvents => { // Adds match events to each fixture
+        .then(fixtureEvents => { //* Adds match events to each fixture
           fixtures.forEach((fixture, i) => {
             fixture.events = fixtureEvents[i].data.api.events;
           })
-          var fixtureStats = fixtures.map((fixture) => {
+          var fixtureStats = fixtures.map((fixture) => { //*Fetches stats and adds match stats to each fixture
             var fixtureId = fixture.fixture_id;
             var url = `/statistics/fixture/${fixtureId}`;
             console.log('Fixture url', url);
@@ -64,6 +63,7 @@ app.get('/api/fixtures/:comp/:date', function (req, res) {
                 return stats.data.api.statistics;
               })
 
+              //*The heavy lifting: data analysis of matches
               models.decorateFixtures(fixtures, statistics);
               let rankedMatches = models.rankMatches(fixtures);
               rankedMatches = models.formatMatches(rankedMatches);
@@ -79,6 +79,7 @@ app.get('/api/fixtures/:comp/:date', function (req, res) {
     })
 });
 
+// Caches match analysis
 app.post('/fixtures', function (req, res) {
   api.insertFixtures(req.body, function (err, result) {
     if (err) {

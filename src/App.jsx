@@ -31,13 +31,13 @@ class App extends Component {
     let date = this.state.matchDate;
 
     axios.get(`/fixtures/${this.state.competition}/${this.state.matchDate}`, { timeout: 10000 })
-      .then(response => {
+      .then(response => { //* First Checks for cached results *//
         if (response.data !== null) {
           console.log('Retrieved cached results!')
           this.setState({
             rankedMatches: response.data.fixtures
           });
-        } else {
+        } else { //*Otherwise fetches data from api*//
           axios.get(`/api/fixtures/${comp}/${date}`)
             .then((response) => {
               console.log('OUR RESPONSE', response.data);
@@ -46,7 +46,7 @@ class App extends Component {
               });
               return response.data;
             })
-            .then((data) => {
+            .then((data) => { //*Then stores results in the cache*//
               console.log('attempting to post data');
               return axios.post('/fixtures', {
                 data: data
