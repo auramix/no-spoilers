@@ -22,12 +22,13 @@ const colorRank = function (ranking) {
 const StyledDivLi = styled.div`
   display: block;
   margin: 10px;
-  height: 100px;
-  width: fit-content;
+  height: 110px;
+  width: 400px;
   border: solid thin;
   border-color: black;
   border-radius: 2%;
   background-color: ${props => colorRank(props.ranking)};
+
 `;
 
 const MatchWrapper = styled.div`

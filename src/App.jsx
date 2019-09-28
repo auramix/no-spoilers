@@ -5,7 +5,7 @@ import CompDropDown from "./components/CompDropDown.jsx";
 import DatePicker from "./components/DatePicker.jsx";
 import { MatchList, MatchItem } from "./components/MatchList.jsx";
 import axios from "axios";
-import { StyledDiv, FormWrapper, AppWrapper } from "./styles/styling.js";
+import { Title, StyledDiv, FormWrapper, AppWrapper, WrapperDiv, Icon } from "./styles/styling.jsx";
 
 class App extends Component {
   constructor(props) {
@@ -70,21 +70,24 @@ class App extends Component {
     return (
       <div className="App">
         <AppWrapper>
-          <h1> Welcome to No Spoilers </h1>
-          <FormWrapper>
-            <form onSubmit={this.handleSubmit}>
-              <CompDropDown onChange={this.handleChange} />
-              <div>
-                <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
-              </div>
-              <StyledDiv>
-                <input type="submit" value="Find Matches"></input>
-              </StyledDiv>
-            </ form>
-          </FormWrapper>
-          <MatchList>
-            {gamesList}
-          </MatchList>
+          <WrapperDiv>
+            <Title> Welcome to No Spoilers </Title>
+            <Icon />
+            <FormWrapper>
+              <form onSubmit={this.handleSubmit}>
+                <CompDropDown onChange={this.handleChange} />
+                <div>
+                  <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
+                </div>
+                <StyledDiv>
+                  <input type="submit" value="Find Matches"></input>
+                </StyledDiv>
+              </ form>
+            </FormWrapper>
+            <MatchList>
+              {gamesList}
+            </MatchList>
+          </WrapperDiv>
         </AppWrapper>
       </div>
     );
