@@ -16,7 +16,7 @@ var matchSchema = new mongoose.Schema({
 var Match = db.model('Match', matchSchema);
 
 var fixturesSchema = new mongoose.Schema({
-  competition: Number,
+  competition: mongoose.Mixed,
   date: String,
   fixtures: [matchSchema]
 });

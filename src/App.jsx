@@ -30,8 +30,13 @@ class App extends Component {
     e.preventDefault();
     let comp = this.state.competition;
     let date = this.state.matchDate;
+    console.log('Comp: ', comp);
 
-    axios.get(`/fixtures/${this.state.competition}/${this.state.matchDate}`, { timeout: 10000 })
+    if(comp === '' || comp === undefined) {
+      comp = 'date';
+    }
+    console.log('App URL: ', comp);
+    axios.get(`/fixtures/${comp}/${date}`, { timeout: 10000 })
       .then(response => { //* First Checks for cached results *//
         if (response.data !== null) {
           console.log('Retrieved cached results!')

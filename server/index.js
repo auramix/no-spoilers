@@ -19,6 +19,10 @@ app.get('/fixtures/:comp/:date', function (req, res) {
   let comp = req.params.comp;
   let date = req.params.date;
 
+  if (comp === 'date') {
+    comp = 'all_competitions';
+  }
+  console.log('checks cache');
   api.findFixtures(comp, date, function (err, result) {
     if (err) {
       res.status(500).send('Error with database find', err);
@@ -30,11 +34,11 @@ app.get('/fixtures/:comp/:date', function (req, res) {
 });
 
 // Fetches data from our api, and reformats it before sending back to the client
-app.get('/api/fixtures/:comp/:date', function (req, res) {
+app.get(['/api/fixtures/:comp/:date', '/api/fixtures/date/:date'], function (req, res) {
   let comp = req.params.comp;
   let date = req.params.date;
-  let url = `/fixtures/league/${comp}/${date}`;
-
+  let url = comp === 'date' ? `/fixtures/date/${date}` :`/fixtures/league/${comp}/${date}`;
+  console.log('URL: ', url);
   axios.get(url, config)
     .then(response => { // Gets fixtures for given date and fetches events for each
       var fixtures = response.data.api.fixtures;
@@ -43,7 +47,7 @@ app.get('/api/fixtures/:comp/:date', function (req, res) {
         var fixtureId = fixture.fixture_id;
         var myurl = `/events/${fixtureId}`;
         return axios.get(myurl, config);
-      });
+      }).slice(0, 20);
       Promise.all(fixtureEvents)
         .then(fixtureEvents => { //* Adds match events to each fixture
           fixtures.forEach((fixture, i) => {
@@ -55,14 +59,14 @@ app.get('/api/fixtures/:comp/:date', function (req, res) {
             console.log('Fixture url', url);
             return axios.get(url, config);
           })
-
+          console.log('Fixture stats', fixtureStats);
           Promise.all(fixtureStats)
             .then(statistics => {
-
+              console.log('Mapping stats');
               statistics = statistics.map((stats) => {
                 return stats.data.api.statistics;
-              })
-
+              });
+              console.log('stats mapped');
               //*The heavy lifting: data analysis of matches
               models.decorateFixtures(fixtures, statistics);
               let rankedMatches = models.rankMatches(fixtures);
