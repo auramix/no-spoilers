@@ -21,8 +21,10 @@ app.get('/fixtures/:comp/:date', function (req, res) {
 
   if (comp === 'date') {
     comp = 'all_competitions';
+  } else {
+    comp = Number(comp);
   }
-  console.log('checks cache');
+  console.log(`checks cache for comp: ${typeof comp}, date: ${typeof date}`);
   api.findFixtures(comp, date, function (err, result) {
     if (err) {
       res.status(500).send('Error with database find', err);
