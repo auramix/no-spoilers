@@ -19,87 +19,87 @@ const colorRank = function (ranking) {
 
 
 
-const StyledDivLi = styled.div`
-  display: block;
-  margin: 10px;
-  height: 110px;
-  width: 400px;
-  border: solid thin;
-  border-color: black;
-  border-radius: 2%;
-  background-color: ${props => colorRank(props.ranking)};
+// const StyledDivLi = styled.div`
+//   display: block;
+//   margin: 10px;
+//   height: 110px;
+//   width: 400px;
+//   border: solid thin;
+//   border-color: black;
+//   border-radius: 2%;
+//   background-color: ${props => colorRank(props.ranking)};
 
-`;
+// `;
 
-const MatchWrapper = styled.div`
-  display: block;
-  margin: 0;
-  padding: 10px 5px 20px 5px;
-  `;
+// const MatchWrapper = styled.div`
+//   display: block;
+//   margin: 0;
+//   padding: 10px 5px 20px 5px;
+//   `;
 
-const ImageDiv = styled.div`
-  position: relative;
-  display: block;
-  margin: auto;
-  height: 48px;
-  width: 48px;
-  background-image: url(${props => props.image});
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-`;
+// const ImageDiv = styled.div`
+//   position: relative;
+//   display: block;
+//   margin: auto;
+//   height: 48px;
+//   width: 48px;
+//   background-image: url(${props => props.image});
+//   background-position: center;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// `;
 
-const BadgeDiv = styled.div`
-  display: inline-block;
-  height: 75px;
-  width: 75px;
-  margin: ${props => props.team === 'home' ? '5px 80px 5px 5px' : '5px 5px 5px 80px'};
-`;
+// const BadgeDiv = styled.div`
+//   display: inline-block;
+//   height: 75px;
+//   width: 75px;
+//   margin: ${props => props.team === 'home' ? '5px 80px 5px 5px' : '5px 5px 5px 80px'};
+// `;
 
-const TeamSpan = styled.span`
-  display: table;
-  margin: auto;
-  position: relative;
-  white-space: nowrap
-`;
+// const TeamSpan = styled.span`
+//   display: table;
+//   margin: auto;
+//   position: relative;
+//   white-space: nowrap
+// `;
 
-const Versus = styled.span`
-  vertical-align: middle;
-  display: inline-table;
-  margin-bottom: 50px;
-}
-`;
+// const Versus = styled.span`
+//   vertical-align: middle;
+//   display: inline-table;
+//   margin-bottom: 50px;
+// }
+// `;
 
 
 function MatchItem(props) {
   return (
-    <StyledDivLi ranking={props.ranking}>
-      <MatchWrapper>
-        <BadgeDiv team={"home"}>
-          <ImageDiv image={props.homeImg} />
-          <TeamSpan team={"home"}>{props.homeTeam}</TeamSpan>
-        </BadgeDiv>
-        <Versus>vs</Versus>
-        <BadgeDiv image={props.awayImg} team={"away"}>
-          <ImageDiv image={props.awayImg} />
-          <TeamSpan team={"away"}>{props.awayTeam}</TeamSpan>
-        </BadgeDiv>
-      </MatchWrapper>
-    </StyledDivLi>
+    <li className="media" ranking={props.ranking}>
+      <div>
+        <div className="match-div" team={"home"}>
+          <img className="mr-3" src={props.homeImg} />
+          <h5 team={"home"}>{props.homeTeam}</h5>
+        </div>
+        <div className="match-div">vs</div>
+        <div className="match-div" team={"away"}>
+          <img className="mr-3" src={props.awayImg} />
+          <h5 team={"away"}>{props.awayTeam}</h5>
+        </div>
+      </div>
+    </li>
   )
 };
 
 
 
-const StyledUl = styled.ul`
-  display: inline-block;
-  padding: 0px 0px 0px 10px;`;
+// const StyledUl = styled.ul`
+//   display: inline-block;
+//   padding: 0px 0px 0px 10px;`;
 
 function MatchList(props) {
   return (
-    <StyledUl>
+    <ul className="list-unstyled">
       {props.children}
-    </StyledUl>
+    </ul>
   )
 };
 

@@ -7,9 +7,9 @@ const DropDownDiv = styled.div`
 
 function CompDropDown(props) {
   return (
-    <DropDownDiv>
+    <div className="form-group">
       <label htmlFor="competition" onChange={props.onChange}>Select a competition:
-        <select id="comp-list" name="competition">
+        <select className="form-control" id="comp-list" name="competition">
           <option value="">--Please choose a competition--</option>
           <option value="530">Champions League</option>
           <option value="524">Premier League</option>
@@ -20,7 +20,7 @@ function CompDropDown(props) {
           <option value="1">World Cup</option>
         </select>
       </label>
-    </DropDownDiv>
+    </div>
   )
 }
 

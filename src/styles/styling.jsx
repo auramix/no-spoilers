@@ -18,14 +18,13 @@ const FormWrapper = styled.div`
 `;
 
 const AppWrapper = styled.div`
-  position: absolute;
+  display: inline-block;
+  position: relative;
   text-align: center;
-  left: 50%;
   top: 5%;
-  width: 500px;
+  width: 900px;
   height: fit-content;
-  margin-left: -100px;
-  margin-top: -50px;
+  margin: 0 auto;
   border: 1px solid black;
   `;
 

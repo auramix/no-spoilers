@@ -78,17 +78,15 @@ class App extends Component {
           <WrapperDiv>
             <Title> Welcome to No Spoilers </Title>
             <Icon />
-            <FormWrapper>
-              <form onSubmit={this.handleSubmit}>
-                <CompDropDown onChange={this.handleChange} />
-                <div>
-                  <DatePicker name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
-                </div>
-                <StyledDiv>
-                  <input type="submit" value="Find Matches"></input>
-                </StyledDiv>
-              </ form>
-            </FormWrapper>
+            <form onSubmit={this.handleSubmit}>
+              <CompDropDown className="form-group" onChange={this.handleChange} />
+              <div>
+                <DatePicker className="form-group" name="matchDate" id="matchDate" text="Select Match Date:" value={this.state.matchDate} onChange={this.handleChange} />
+              </div>
+              <StyledDiv>
+                <input className="btn btn-primary" type="submit" value="Find Matches"></input>
+              </StyledDiv>
+            </ form>
             <MatchList>
               {gamesList}
             </MatchList>
