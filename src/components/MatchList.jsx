@@ -74,15 +74,19 @@ const colorRank = function (ranking) {
 function MatchItem(props) {
   return (
     <li className="media" ranking={props.ranking}>
-      <div>
+      <div className="matches-wrapper">
         <div className="match-div" team={"home"}>
-          <img className="mr-3" src={props.homeImg} />
-          <h5 team={"home"}>{props.homeTeam}</h5>
+          <img className="team-img" src={props.homeImg} />
+          <div className="centered">
+            <h5 team={"home"}>{props.homeTeam}</h5>
+          </div>
         </div>
-        <div className="match-div">vs</div>
+        <div className="match-div badge badge-secondary badge-vs">vs</div>
         <div className="match-div" team={"away"}>
-          <img className="mr-3" src={props.awayImg} />
-          <h5 team={"away"}>{props.awayTeam}</h5>
+          <img className="team-img" src={props.awayImg} />
+          <div className="centered">
+            <h5 team={"away"}>{props.awayTeam}</h5>
+          </div>
         </div>
       </div>
     </li>

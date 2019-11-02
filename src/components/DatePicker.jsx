@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StyledSpan = styled.span`
-  margin: 10px;
-`;
+// const StyledSpan = styled.span`
+//   margin: 10px;
+// `;
 
 function convertDate(date) {
   date = date.split('/');
@@ -17,10 +17,11 @@ function DatePicker(props) {
   date = convertDate(date);
 
   return (
-    <StyledSpan>
-      <label htmlFor={props.for}>{props.text}</label>
-      <input type="date" name={props.name} value={props.dateFrom} min="2000-01-01" max={date} onChange={props.onChange}></input>
-    </StyledSpan>
+    <div className="form-group">
+      <label htmlFor={props.for}>{props.text}
+        <input className="form-control" type="date" name={props.name} value={props.dateFrom} min="2000-01-01" max={date} onChange={props.onChange}></input>
+      </label>
+    </div>
   )
 }
 
