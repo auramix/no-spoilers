@@ -73,8 +73,8 @@ const colorRank = function (ranking) {
 
 function MatchItem(props) {
   return (
-    <li className="media" ranking={props.ranking}>
-      <div className="matches-wrapper">
+    <li className="media" ranking={props.ranking} >
+      <div className="matches-wrapper" style={{'backgroundColor': colorRank(props.ranking)}}>
         <div className="match-div" team={"home"}>
           <img className="team-img" src={props.homeImg} />
           <div className="centered">
