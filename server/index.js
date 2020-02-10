@@ -68,10 +68,12 @@ app.get(['/api/fixtures/:comp/:date', '/api/fixtures/date/:date'], function (req
               statistics = statistics.map((stats) => {
                 return stats.data.api.statistics;
               });
-              console.log('stats mapped');
+              console.log('stats mapped', statistics);
+
               //*The heavy lifting: data analysis of matches
               models.decorateFixtures(fixtures, statistics);
               let rankedMatches = models.rankMatches(fixtures);
+              console.log('ranked matches', rankedMatches);
               rankedMatches = models.formatMatches(rankedMatches);
               res.status(200).json(rankedMatches);
             })

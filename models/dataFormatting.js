@@ -28,9 +28,9 @@ var rankMatches = function (matches) {
   let ranks = {
     'resultChanges': 40,
     'goals': 25,
-    'numEvents': 10,
+    'numEvents': 15,
     'numShotsOnGoal': 10,
-    'possDiff': 10,
+    'possDiff': 5,
     'saves': 5
   }
 

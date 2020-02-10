@@ -39,7 +39,7 @@ class App extends Component {
     axios.get(`/fixtures/${comp}/${date}`, { timeout: 10000 })
       .then(response => { //* First Checks for cached results *//
         if (response.data !== null) {
-          console.log('Retrieved cached results!')
+          console.log('Retrieved cached results!', response.data.fixtures);
           this.setState({
             rankedMatches: response.data.fixtures
           });
