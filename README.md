@@ -3,7 +3,7 @@
 
 ## Table of Contents
 
-1. [Usage](#Usage)
+1. [Usage](#usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
 
@@ -25,6 +25,8 @@
 > You will need install mongoDb in order to use this application, or remove the code that checks for caching on the initial axios request.
 
 ## Development
+
+> The code base has considerable amounts of unused styling code from initial iteration which used Styled-Components. Out of curiosity I wanted to refactor to SASS, so that is the reason both are present here.
 
 ### Installing Dependencies
 
