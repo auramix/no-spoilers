@@ -11,7 +11,7 @@
 
 > You can start by choosing a date and competition to rank. Currently, date ranges are not supported - only a single match date may be ranked at a time.
 
-> The 3rd party API is somewhat unreliable in that competition codes are not the same year-to-year. So although you can search for current match rankings across the provided leauges, searches are only guaranteed to work for the current season.
+> The 3rd party API is somewhat unreliable in that competition codes are not the same year-to-year. So although you can search for current match rankings across the provided leagues, searches are only guaranteed to work for the current season.
 
 
 ## API
