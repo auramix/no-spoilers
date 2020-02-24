@@ -25,6 +25,8 @@ var formatMatches = function (matches) {
 }
 
 var rankMatches = function (matches) {
+
+  // Weighted percantages
   let ranks = {
     'resultChanges': 40,
     'goals': 25,
