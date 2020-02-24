@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }))
 
-// Checks DB for data
+// Checks DB for cached data
 app.get('/fixtures/:comp/:date', function (req, res) {
   let comp = req.params.comp;
   let date = req.params.date;
@@ -24,7 +24,9 @@ app.get('/fixtures/:comp/:date', function (req, res) {
   } else {
     comp = Number(comp);
   }
+
   console.log(`checks cache for comp: ${typeof comp}, date: ${typeof date}`);
+
   api.findFixtures(comp, date, function (err, result) {
     if (err) {
       res.status(500).send('Error with database find', err);
@@ -40,7 +42,7 @@ app.get(['/api/fixtures/:comp/:date', '/api/fixtures/date/:date'], function (req
   let comp = req.params.comp;
   let date = req.params.date;
   let url = comp === 'date' ? `/fixtures/date/${date}` :`/fixtures/league/${comp}/${date}`;
-  console.log('URL: ', url);
+
   axios.get(url, config)
     .then(response => { // Gets fixtures for given date and fetches events for each
       var fixtures = response.data.api.fixtures;
@@ -51,29 +53,35 @@ app.get(['/api/fixtures/:comp/:date', '/api/fixtures/date/:date'], function (req
         return axios.get(myurl, config);
       }).slice(0, 20);
       Promise.all(fixtureEvents)
-        .then(fixtureEvents => { //* Adds match events to each fixture
+        .then(fixtureEvents => { // Adds match events to each fixture
           fixtures.forEach((fixture, i) => {
             fixture.events = fixtureEvents[i].data.api.events;
           })
-          var fixtureStats = fixtures.map((fixture) => { //*Fetches stats and adds match stats to each fixture
+          var fixtureStats = fixtures.map((fixture) => { // Fetches stats and adds match stats to each fixture
             var fixtureId = fixture.fixture_id;
             var url = `/statistics/fixture/${fixtureId}`;
+
             console.log('Fixture url', url);
+
             return axios.get(url, config);
           })
           console.log('Fixture stats', fixtureStats);
           Promise.all(fixtureStats)
             .then(statistics => {
               console.log('Mapping stats');
+
               statistics = statistics.map((stats) => {
                 return stats.data.api.statistics;
               });
+
               console.log('stats mapped', statistics);
 
               //*The heavy lifting: data analysis of matches
               models.decorateFixtures(fixtures, statistics);
               let rankedMatches = models.rankMatches(fixtures);
+
               console.log('ranked matches', rankedMatches);
+
               rankedMatches = models.formatMatches(rankedMatches);
               res.status(200).json(rankedMatches);
             })
